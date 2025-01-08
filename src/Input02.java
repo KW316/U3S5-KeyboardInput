@@ -2,30 +2,32 @@ import javax.swing.JOptionPane;
 
 public class Input02 {
     public static void main(String[] args) {
-        
+
         JOptionPane.showMessageDialog(null,
-                "There's no input here, just a message",
-                "Title",
-                0);
+                "This is an error message.",
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
 
         
         String input1 = (String)JOptionPane.showInputDialog(null,
-                "Is this a question?",
+                "Type your name?",
                 "Dialog Title",
                 2,
                 null,
                 null,
                 "Type something here.");
+
         
-        
-        String[] acceptableValues = {"Choice 1", "Choice 2", "Choice 3"};
+        String[] acceptableValues = {"Dog", "Cat", "Giraffe"};
         String input2 = (String)JOptionPane.showInputDialog(null,
-                "Is this a question?",
+                "What is the best animal?",
                 "Dialog Title",
                 2,
                 null,
                 acceptableValues,
                 acceptableValues[1]);
+        System.out.println(input1);
+        System.out.println(input2);
                 
     }
 }
